@@ -16,4 +16,9 @@ public class StudentController{
     return st.getstudents();
   }
   
+  @PostMapping("students")
+  public String addStudents(@RequestBody Student student){
+    st.addStudents(student);
+    return "ADDED SUCESSFULLY!";
+  }
 }
