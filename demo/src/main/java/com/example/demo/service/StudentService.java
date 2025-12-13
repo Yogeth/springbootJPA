@@ -12,8 +12,11 @@ public class StudentService{
   public List<Student> getstudents(){
     return repo.findAll();
   }
-  
   public void addStudents(Student student){
       repo.save(student);
   }
+  public Student getbyrollno(int rno){
+    return repo.getById(rno).orElse(new Student());
+  }
+  
 }

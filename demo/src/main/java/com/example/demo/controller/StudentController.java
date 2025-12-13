@@ -15,6 +15,11 @@ public class StudentController{
   public List<Student> getAllstudents(){
     return st.getstudents();
   }
+  //get by rollnumber 
+  @GetMapping("students/{rno}")
+  public Student getbyrollno(@PathVariable int rno){
+   return st.getbyrollno(rno);
+  }
   
   @PostMapping("students")
   public String addStudents(@RequestBody Student student){
