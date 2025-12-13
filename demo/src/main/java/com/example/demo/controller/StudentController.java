@@ -15,7 +15,7 @@ public class StudentController{
   public List<Student> getAllstudents(){
     return st.getstudents();
   }
-  //get by rollnumber 
+  
   @GetMapping("students/{rno}")
   public Student getbyrollno(@PathVariable int rno){
    return st.getbyrollno(rno);
@@ -32,4 +32,17 @@ public String updatestudent(@RequestBody Student student){
   st.update(student);
   return "SUCESSFULLY UPDATED!";
 }
+
+@DeleteMapping("students")
+public String deleteStudents(){
+  st.deleteAll();
+  return "TABLE STUDENT CLEARED!";
+}
+
+@DeleteMapping("students/{rno}")
+public String deletebyrno(@PathVariable int rno){
+  st.deleteByrno(rno);
+  return "DELETED SUCESSFULLY!";
+}
+
 }

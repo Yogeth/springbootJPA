@@ -21,4 +21,10 @@ public class StudentService{
   public void update(Student st){
     repo.save(st);
   }
+  public void deleteall(){
+    repo.deleteAll();
+  }
+  public void deleteByrno(int rno){
+    repo.deleteById(rno);
+  }
 }
