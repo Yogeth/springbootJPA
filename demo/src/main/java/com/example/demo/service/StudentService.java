@@ -16,7 +16,7 @@ public class StudentService{
       repo.save(student);
   }
   public Student getbyrollno(int rno){
-    return repo.getById(rno).orElse(new Student());
+    return repo.findById(rno).orElse(new Student());
   }
   
 }
