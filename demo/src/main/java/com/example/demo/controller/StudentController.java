@@ -45,4 +45,9 @@ public String deletebyrno(@PathVariable int rno){
   return "DELETED SUCESSFULLY!";
 }
 
+@GetMapping("students/technology/{tech}")
+public List<Student> getByTechnology(@PathVariable("tech") String technology){
+ return  st.getByTechnology(technology);
+}
+
 }

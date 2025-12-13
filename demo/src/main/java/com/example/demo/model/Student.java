@@ -11,4 +11,5 @@ public class Student{
   @Id
   private int rollno;
   private String gender;
+  private String technology;
 }
