@@ -26,4 +26,10 @@ public class StudentController{
     st.addStudents(student);
     return "ADDED SUCESSFULLY!";
   }
+  
+@PutMapping("students")
+public String updatestudent(@RequestBody Student student){
+  st.update(student);
+  return "SUCESSFULLY UPDATED!";
+}
 }
