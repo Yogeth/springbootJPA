@@ -35,7 +35,7 @@ public String updatestudent(@RequestBody Student student){
 
 @DeleteMapping("students")
 public String deleteStudents(){
-  st.deleteAll();
+  st.deleteall();
   return "TABLE STUDENT CLEARED!";
 }
 
